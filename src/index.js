@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import FacebookLogin from 'react-facebook-login';
 import './index.css';
 
-
 function Square(props) {
   return (
     <button className="square" onClick={props.onClick}>
@@ -79,6 +78,8 @@ class Game extends React.Component {
       }],
       stepNumber: 0,
       xIsNext: true,
+      username: null,
+      email: null,
     };
   }
 
@@ -103,18 +104,36 @@ class Game extends React.Component {
       status = winner + ' is the winner.'
     }
 
+    var welcome = 'Hello ' + (this.state.username ? this.state.username : 'User');
+
     return (
-      <div className="game">
-        <div className="game-board">
-          <Board
-            squares = {current.squares}
-            onClick={(i) => this.handleClick(i)}
-          />
+      <div className="screen">
+        <div className="hello">
+        {welcome}
+        <br></br>
+        Are you ready to see your future?
         </div>
-        <div className="game-info">
-          <div>{status}</div>
-          <ol>{moves}</ol>
-        </div>
+        <form class="form-style-4" action="" method="post">
+          <label for="field1">
+            <span>Enter Your Question</span><input type="text" name="field1" required="true" />
+          </label>
+        </form>
+        {!this.state.username &&
+        <div className="facebook">
+          <FacebookLogin
+            appId="868688626897033"
+            autoLoad={false}
+            fields="name,email,picture"
+            callback={(response) => {
+              console.log(response);
+              this.setState({
+                username: response.name,
+                email: response.email,
+              })
+            }} />
+        </div>}
+        {this.state.username}
+        {this.state.email}
       </div>
     );
   }
