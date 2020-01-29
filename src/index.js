@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import FacebookLogin from 'react-facebook-login';
 import './index.css';
 
-class Game extends React.Component {
+class App extends React.Component {
 
   constructor(props) {
     super(props);
@@ -11,8 +11,26 @@ class Game extends React.Component {
       username: null,
       email: null,
       answer: null,
+      data: null,
     };
   }
+
+  componentDidMount() {
+    // Call our fetch function below once the component mounts
+  this.callBackendAPI()
+    .then(res => this.setState({ data: res.express }))
+    .catch(err => console.log(err));
+}
+  // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
+  callBackendAPI = async () => {
+    const response = await fetch('/express_backend');
+    const body = await response.json();
+
+    if (response.status !== 200) {
+      throw Error(body.message)
+    }
+    return body;
+  };
 
   render() {
     var welcome = 'Hello ' + (this.state.username ? this.state.username : 'User');
@@ -61,6 +79,7 @@ class Game extends React.Component {
 // ========================================
 
 ReactDOM.render(
-  <Game />,
+  <App />,
   document.getElementById('root')
 );
+export default App;
