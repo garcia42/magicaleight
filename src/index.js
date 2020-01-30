@@ -78,16 +78,18 @@ class App extends React.Component {
           {responses && <ol>{responses}</ol>}
         </div>}
         <div className="middle">
-          Are you ready to see your future?
+          <div className="welcome">
+            Are you ready to see your future?
+          </div>
           <form className="form-style-4" action="#" onSubmit={() => {}}>
             <label>
               <span>Enter Your Question</span><input type="text" name="field1" required={true} onChange={this.handleQuestionChange} />
             </label>
               <label><span> </span><input type="submit" value="Ask and Receive your Future" onClick={this.handleQuestionSubmitted}/></label>
           </form>
-        </div>
-        <div className="answer">
-        {this.state.isSubmitted && !(typeof currentResponse == "undefined") && <Response question={currentResponse.question} answer={currentResponse.answer}/>}
+          <div className="answer">
+          {this.state.isSubmitted && !(typeof currentResponse == "undefined") && <Response question={currentResponse.question} answer={currentResponse.answer}/>}
+          </div>
         </div>
       </div>
     );

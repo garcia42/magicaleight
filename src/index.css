@@ -13,13 +13,18 @@ ol, ul {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
   color: #fff;
+}
 
+.screen {
+  width: 100%;
+  height: 100%;
 }
 
 .middle {
   position: fixed;
   top: 50%;
   left: 50%;
+  width: 60%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
   text-align: center;
@@ -36,12 +41,18 @@ ol, ul {
   color: #fff;
 }
 
+.welcome {
+  width: 100%;
+  text-align: center;
+  padding: 30px 30px 15px 30px;
+}
+
 .facebook {
   text-align: center;
 }
 
 .form-style-4{
-	width: 450px;
+	width: 100%;
 	font-size: 16px;
 	background: #495C70;
 	padding: 30px 30px 15px 30px;
@@ -67,7 +78,7 @@ ol, ul {
 .form-style-4 label > span{
 	display: inline-block;
 	float: left;
-	width: 150px;
+	width: 40%;
 }
 .form-style-4 input[type=text],
 .form-style-4 input[type=email]
@@ -75,7 +86,7 @@ ol, ul {
 	background: transparent;
 	border: none;
 	border-bottom: 1px dashed #83A4C5;
-	width: 275px;
+	width: 60%;
 	outline: none;
 	padding: 0px 0px 0px 0px;
 	font-style: italic;
@@ -88,9 +99,8 @@ ol, ul {
 	outline: none;
 	border: none;
 	border-bottom: 1px dashed #83A4C5;
-	width: 275px;
+	width: 60%;
 	overflow: hidden;
-	resize:none;
 	height:20px;
   text-align: center;
 }
