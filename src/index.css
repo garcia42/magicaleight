@@ -1,5 +1,5 @@
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
+  font: 3.0vw "Century Gothic", Futura, sans-serif;
   margin: 20px;
   background-color: #576E86;
 }
@@ -10,7 +10,7 @@ ol, ul {
 
 .responses {
   margin-left: 20px;
-  font: 14px "Century Gothic", Futura, sans-serif;
+  font: 1.5vw "Century Gothic", Futura, sans-serif;
   margin: 20px;
   color: #fff;
 }
@@ -30,14 +30,14 @@ ol, ul {
   text-align: center;
   font-style: italic;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 40px;
+  font-size: 3vw;
   color: #fff;
 }
 
 .answer {
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 60px;
+  font-size: 3vw;
   color: #fff;
 }
 
@@ -53,7 +53,7 @@ ol, ul {
 
 .form-style-4{
 	width: 100%;
-	font-size: 16px;
+	font-size: 1.5vw;
 	background: #495C70;
 	padding: 30px 30px 15px 30px;
 	border: 5px solid #53687E;
@@ -66,7 +66,7 @@ ol, ul {
 .form-style-4 label
 {
 	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 16px;
+	font-size: 1.5vw;
 	color: #fff;
 
 }
