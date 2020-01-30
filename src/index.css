@@ -9,9 +9,8 @@ ol, ul {
 }
 
 .responses {
-  margin-left: 20px;
   font: 1.5vw "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  margin: 8px;
   color: #fff;
 }
 
@@ -56,7 +55,7 @@ ol, ul {
 
 .form-style-4{
 	width: 100%;
-	font-size: 1.5vw;
+	font-size: 2vw;
 	background: #495C70;
 	padding: 30px 30px 15px 30px;
 	border: 5px solid #53687E;
@@ -72,7 +71,7 @@ ol, ul {
 .form-style-4 label
 {
 	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 1.5vw;
+	font-size: 2vw;
 	color: #fff;
 
 }
@@ -107,7 +106,7 @@ ol, ul {
 	border-bottom: 1px dashed #83A4C5;
 	width: 60%;
 	overflow: hidden;
-	height:20px;
+	height:10%;
   text-align: center;
 }
 
